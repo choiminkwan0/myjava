@@ -1,6 +1,6 @@
 package Type;
 
-public class Ex01 {
+public class Ex01 { // equals와 참조 변수의 == 차이
 
     public static void main(String[] args) {
         String strVar1 = "신민철";
@@ -28,7 +28,7 @@ public class Ex01 {
         if(strVar3.equals(strVar4)) {
             System.out.println("strVar3과 strVar4는 문자열이 같음");
         }
-        }
     }
+}
     
 
