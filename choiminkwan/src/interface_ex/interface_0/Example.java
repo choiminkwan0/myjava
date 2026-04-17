@@ -1,0 +1,22 @@
+package interface_ex.interface_0;
+
+public class Example { // 인터페이스 상속
+    public static void main(String[] args) {
+        ImplementationC imp1 = new ImplementationC();
+
+        InterfaceA ia = imp1;
+        ia.methodA();
+        System.out.println();
+
+        InterfaceB ib = imp1;
+        ib.methodB();
+        System.out.println();
+
+        InterfaceC ic = imp1;
+        ic.methodA();
+        ic.methodB();
+        ic.methodC();
+        
+    }
+    
+}
