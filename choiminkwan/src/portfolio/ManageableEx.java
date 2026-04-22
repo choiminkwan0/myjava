@@ -12,6 +12,7 @@ public class ManageableEx implements Manageable {
     FileInputStream fis = null;
     InputStreamReader reader = null;
 
+    @Override
     public void addItem(Book book) {
         if (count<books.length){
             books[count++] = book;    
@@ -20,7 +21,8 @@ public class ManageableEx implements Manageable {
             System.out.println("================================");
         }  
     }
-
+    
+    @Override
     public void displayAll() {
         if(count==0) {
             System.out.println("등록된 도서가 없습니다.");
@@ -35,7 +37,7 @@ public class ManageableEx implements Manageable {
         }
     }
 }
-
+    @Override
     public void saveToFile() {
         try {
             fos = new FileOutputStream("C:/myjava/choiminkwan/src/portfolio/books.txt");
@@ -51,6 +53,7 @@ public class ManageableEx implements Manageable {
 
     }
 
+    @Override
     public void loadFromFile() {
         try {
             fis = new FileInputStream("C:/myjava/choiminkwan/src/portfolio/books.txt");
