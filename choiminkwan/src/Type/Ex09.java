@@ -1,4 +1,4 @@
-package Type;
+package type;
 
 public class Ex09 { // System.arraycopy()로 배열 복사
 

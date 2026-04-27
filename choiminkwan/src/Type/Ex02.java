@@ -1,4 +1,4 @@
-package Type;
+package type;
 
 public class Ex02 { // 값 목록으로 배열 생성
 

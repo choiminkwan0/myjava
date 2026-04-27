@@ -1,4 +1,4 @@
-package Type;
+package type;
 
 public class Ex04 { // 배열 타입 별 항목의 기본값
 

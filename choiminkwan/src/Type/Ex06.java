@@ -1,4 +1,4 @@
-package Type;
+package type;
 
 public class Ex06 { // 2차원 배열
 

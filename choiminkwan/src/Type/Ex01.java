@@ -1,4 +1,4 @@
-package Type;
+package type;
 
 public class Ex01 { // equals와 참조 변수의 == 차이
 

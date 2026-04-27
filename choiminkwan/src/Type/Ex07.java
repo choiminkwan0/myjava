@@ -1,4 +1,4 @@
-package Type;
+package type;
 
 public class Ex07 { // 객체를 참조하는 배열
 

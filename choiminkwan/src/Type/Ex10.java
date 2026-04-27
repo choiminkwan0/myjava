@@ -1,4 +1,4 @@
-package Type;
+package type;
 
 public class Ex10 { // 향상된 for문
 

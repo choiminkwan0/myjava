@@ -1,4 +1,4 @@
-package Type;
+package type;
 
 public class Ex05 { // 배열의 length
 

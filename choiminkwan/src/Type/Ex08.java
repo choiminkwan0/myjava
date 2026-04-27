@@ -1,4 +1,4 @@
-package Type;
+package type;
 
 public class Ex08 { // for문으로 배열 복사
 
