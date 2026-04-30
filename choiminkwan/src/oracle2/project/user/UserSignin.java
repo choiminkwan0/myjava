@@ -1,11 +1,11 @@
-package oracle2.project;
+package oracle2.project.user;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class UserSign {
+public class UserSignin {
     public static void main(String[] args) {
         Connection conn = null;
         try {

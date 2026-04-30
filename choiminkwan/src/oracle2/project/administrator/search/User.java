@@ -1,4 +1,4 @@
-package oracle2.project;
+package oracle2.project.administrator.search;
 
 public class User {
     private String USER_ID;
@@ -48,7 +48,8 @@ public class User {
 
     @Override
     public String toString() {
-        return USER_ID + " " + USER_PW + " " + USER_NAME + " " +
-        USER_TEL + " " + USER_DATE + " " + USER_RENTAL;
+        return "회원ID: " + USER_ID + ", " + "비밀번호: " + USER_PW + ", " 
+        + "이름: " + USER_NAME + ", " + "전화번호: " + USER_TEL + ", " + 
+        "가입일: " + USER_DATE + ", " + "대여정지여부: " + USER_RENTAL;
     }
 }

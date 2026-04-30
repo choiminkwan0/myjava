@@ -1,4 +1,4 @@
-package oracle2.project;
+package oracle2.project.user;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -46,6 +46,8 @@ public class UserLogin {
             };
             System.out.println(message);
 
+            scanner.close();
+            cstmt.close();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

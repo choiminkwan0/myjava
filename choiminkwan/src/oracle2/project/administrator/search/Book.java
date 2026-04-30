@@ -1,4 +1,4 @@
-package oracle2.project;
+package oracle2.project.administrator.search;
 
 public class Book {
     private int BOOK_PK;
@@ -50,8 +50,9 @@ public class Book {
    
     @Override
     public String toString() {
-        return BOOK_PK + " " + ISBN + " " + BOOK_NAME + " " +
-        AUTHOR + " " + PUBLISHER + " " + BOOK_RENTAL;
+        return "도서번호: " + BOOK_PK + ", " + "ISBN: " + ISBN + ", " + 
+        "도서명: " + BOOK_NAME + ", " + "저자: " + AUTHOR + ", " + 
+        "출판사: " + PUBLISHER + ", " + "대여가능여부: " + BOOK_RENTAL;
     }
 }    
 

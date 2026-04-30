@@ -1,11 +1,12 @@
-package oracle2.project.bookcrud;
+package oracle2.project.user;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Scanner;
 
-public class BookUpdate {
+public class UserSignout {
     public static void main(String[] args) {
         Connection conn = null;
         try {
@@ -18,28 +19,24 @@ public class BookUpdate {
                 "system",
                 "1234"
             );
+            Scanner scanner = new Scanner(System.in);
 
-            String sql = new StringBuilder()
-                .append("UPDATE BOOK_TABLE SET ")
-                .append("ISBN=?, ")
-                .append("BOOK_NAME=?, ")
-                .append("AUTHOR=?, ")
-                .append("PUBLISHER=?, ")
-                .append("BOOK_RENTAL=? ")
-                .append("WHERE BOOK_PK=?")
-                .toString();
+            System.out.println("--- 회원탈퇴 ---");
+            System.out.print("아이디: ");
+            String id = scanner.nextLine();
+
+            String sql = "DELETE FROM MEMBER_TABLE WHERE USER_ID=?";
 
             PreparedStatement pstmt = conn.prepareStatement(sql);
-            pstmt.setInt(1, 1002);
-            pstmt.setString(2, "심청");
-            pstmt.setString(3, "심청");
-            pstmt.setString(4, "효녀");
-            pstmt.setString(5, "가능");
-            pstmt.setInt(6, 8);
+            pstmt.setString(1, id);
 
             int rows = pstmt.executeUpdate();
-            System.out.println("수정된 행 수: " + rows);
-
+            if (rows > 0) {
+                System.out.println("회원탈퇴에 성공하였습니다.");
+            } else {
+                System.out.println("회원탈퇴에 실패하였습니다.");
+            }
+            scanner.close();
             pstmt.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -51,5 +48,5 @@ public class BookUpdate {
                 } catch (SQLException e) {}
             }
         }
-    }
+    }    
 }
